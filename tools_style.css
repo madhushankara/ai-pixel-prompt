@@ -1,0 +1,19 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #000;
+  overflow: hidden;
+}
+.example-text {
+        color: #fff;
+        font-size: 3.5em;
+        text-align: center;
+    }
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 12px;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+    }
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="back.css" />
+    <style>
+    body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+        background: black;
+    cursor: none;
+    overflow: hidden;
+}
+
+canvas#canvas-club {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+    .title {
+        font-size: 3em;
+        text-align: center;
+        margin-bottom: 20px;
+        position: relative;
+        z-index: 1;
+    }
+    .content {
+        width: 80%;
+        text-align: justify;
+        position: relative;
+        z-index: 1;
+    }
+    @media only screen and (max-width: 600px) {
+    body {
+        font-size: 12px;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+    }
+}
+    </style>
+</head>
+<body>
+    <canvas id="canvas-club"></canvas>
+    <script src="javascript.js"></script>
+    <button class="back" onclick="window.location.href='index.html'">Back</button>
+    <div class="title">How to Use</div>
+    <div class="content">
+        <h1>How to Caption Images Online</h1>
+        <ol>
+            <br>
+            <li>Click on Choose File Button then Select your Image.</li>
+            <br>
+            <li>Once the Images are selected press the Create Caption button, The Image to caption generator will automatically create the best caption for your image.</li>
+            <br>
+            <li>Copy the caption and use it anywhere.</li>
+            <br>
+        </ol>
+        <h1>How it Works</h1>
+        <p>Our AI image caption generator uses state-of-the-art deep learning algorithms to analyze and understand the content of an image. It then generates a descriptive caption that best represents the visual information in the image.</p>
+        <h1>Why Image Captions Matter</h1>
+        <p>Captions act as a link between your visual content and your audience. They give context, improve comprehension, and establish a stronger emotional connection to your readers. Whether you're a content blogger, marketer, educator, or business owner, captivating captions can make your images more memorable. This Image Caption Generator assists you in creating captions that are pertinent, captivating, and descriptive. This tool employs advanced neural networks to analyze your images and generate captions that resonate with your intended audience.</p>
+        <h1>Start Generating Captions Today</h1>
+        <p>Don't miss out on the opportunity to enhance your images with rich, accurate captions. Try our AI image caption generator today and experience the power of cutting-edge artificial intelligence in action.</p>
+    </div>
+</body>
+</html>

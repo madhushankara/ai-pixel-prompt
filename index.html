@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AIPixelPrompt</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="tools_style.css" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+</head>
+<body>
+    <div class="title">AIPixelPrompt</div>
+    <div class="menu">
+        <button class="btn tools" onclick="window.location.href='tools.html'">Tools</button>
+        <button class="btn how_to_use" onclick="window.location.href='how_to_use.html'">How to Use</button>
+        <button class="btn about_us" onclick="window.location.href='about_us.html'">About Us</button>
+    </div>
+    <div class="main-text">Image Caption Generator</div>
+<h4>Generate captions for any image by uploading image or pasting image URL.</h4>
+   <div class="drop-zone">
+       <img src="images/cloud.png" class="upload" alt="">
+		<span class="drop-zone__prompt">Drop file here or click to upload</span>
+		<input type="file" name="myFile" class="drop-zone__input">
+	</div>
+    <br>
+    <div class="response-box">
+    <label>
+        <input type="text" placeholder="Paste image URL">
+    </label>
+</div>
+    </br>
+<div> <button class="generate">Generate </button> </div>
+   <div class="url-container">
+    <div class="url-box">
+        <input type="text" placeholder="AI generated response will appear here">
+    </div>
+    <button class="sound-button"><img src="images/sound.png"></button>
+       <div class="voice">Voice</div>
+    <div class="switch">
+        <input type="radio" name="gender" id="male" checked>
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="female">
+        <label for="female">Female</label>
+    </div>
+</div>
+    <button class="btn examples" onclick="window.location.href='examples.html'">EXAMPLES</button>
+    <script>
+    document.body.addEventListener("pointermove", (e)=>{
+      const { currentTarget: el, clientX: x, clientY: y } = e;
+      const { top: t, left: l, width: w, height: h } = el.getBoundingClientRect();
+      el.style.setProperty('--posX',  x-l-w/2);
+      el.style.setProperty('--posY',  y-t-h/2);
+    })
+    </script>
+    <script src="main.js"></script>
+</body>
+</html>

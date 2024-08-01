@@ -1,0 +1,29 @@
+
+.back {
+  top: 30px;
+  left: 30px;
+  margin: 1rem;
+  color: #FFF;
+  font-size: 1.4em;
+  padding: .5em 1em;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+  --border-size: 2px;
+  overflow: hidden;
+ text-align: center;
+ text-transform: uppercase;
+ font-family: poppins, serif;
+ box-sizing: border-box;
+ border-radius: 50px;
+ border: white 3px solid;
+  transition: 500ms ease-in-out;
+  z-index: 1;
+}
+.back:hover {
+ box-shadow: 0 5px 50px 0 #ffffff inset, 0 5px 50px 0 #ffffff,
+             0 5px 50px 0 #ffffff inset, 0 5px 50px 0 #ffffff;
+ text-shadow: 0 0 5px 0 #ffffff, 0 0 5px #ffffff;
+}
+
+

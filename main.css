@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+    body {
+         height:100vh;
+         margin: 0;
+         font-family: Arial, sans-serif;
+         background-color: #000;
+         color: #fff;
+         padding: 0;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         flex-wrap: wrap;
+       --x: calc(var(--posX, 0) * 1px);
+      --y: calc(var(--posY, 0) * 1px);
+      background-image:
+        linear-gradient(115deg, rgb(211 255 215), rgb(0 0 0)),
+        radial-gradient( 90% 100% at calc( 50% + var(--x)) calc( 0% + var(--y)), rgb(200 200 200), rgb(022 000 045)),
+        radial-gradient(100% 100% at calc( 80% - var(--x)) calc( 0% - var(--y)), rgb(250 255 000), rgb(036 000 000)),
+        radial-gradient(150% 210% at calc(100% + var(--x)) calc( 0% + var(--y)), rgb(020 175 125), rgb(000 010 255)),
+        radial-gradient(100% 100% at calc(100% - var(--x)) calc(30% - var(--y)), rgb(255 077 000), rgb(000 200 255)),
+        linear-gradient(60deg, rgb(255 000 000), rgb(120 086 255));
+      background-blend-mode: overlay, overlay, difference, difference, difference, normal;
+}
+.title {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        font-size: 4em;
+        font-family: 'Orbitron', sans-serif;
+        color: rgba(255, 255, 255, 0.7);
+        pointer-events: none;
+    }
+
+.main-text {
+        font-size: 3.5em;
+        text-align: center;
+        margin-top: 60px;
+    }
+.menu {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+.drop-zone {
+	max-width: 550px;
+	height: 285px;
+	padding: 10px;
+	display: flex;
+    flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	font-family: "Quicksand", sans-serif;
+	font-weight: 500;
+	font-size: 20px;
+	cursor: pointer;
+	color: #cccccc;
+	border: 4px dashed rgb(255, 255, 255);
+	border-radius: 10px;
+}
+button {
+  margin: 1rem;
+}
+
+.btn {
+  background-color: var(--background-color);
+  color: #FFF;
+  font-size: 1.3em;
+  padding: .5em 1em;
+  outline: none;
+  position: relative;
+  cursor: pointer;
+  --background-color: rgba(0, 0, 0, 0.31);
+  --border-size: 2px;
+  --accent-color: rgb(255, 255, 255);
+   border-radius: 40px;
+    box-sizing: border-box;
+   border: rgba(0,0,0,0);
+   transition: 500ms ease-in-out;
+}
+
+
+.btn.about_us::before,
+.btn.how_to_use::before,
+.btn.examples::before,
+.btn.tools::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 1);
+  border-radius: 50%;
+  transition: transform 500ms ease-in-out;
+  transform: scale(1.5);
+}
+
+.btn.about_us:hover::before,
+.btn.how_to_use:hover::before,
+.btn.examples:hover::before,
+.btn.tools:hover::before,
+.btn.about_us:focus::before,
+.btn.how_to_use:focus::before,
+.btn.examples:focus::before,
+.btn.tools:focus::before {
+    transition: 500ms ease-in-out;  
+  transform: scale(0);
+}
+
+.btn.about_us,
+.btn.how_to_use,
+.btn.examples,
+.btn.tools {
+  transition: 500ms ease-in-out;  
+  z-index: 1;
+  overflow: hidden;
+  background-color: var(--accent-color);
+  transition: color 500ms ease-in-out;
+}
+
+.btn.about_us:hover,
+.btn.how_to_use:hover,
+.btn.examples:hover,
+.btn.tools:hover,
+.btn.about_us:focus,
+.btn.how_to_use:focus,
+.btn.examples:focus,
+.btn.tools:focus {
+    transition: 500ms ease-in-out;
+   box-shadow: 0 5px 50px 0 #ffffff inset, 0 5px 50px 0 #ffffff,
+             0 5px 50px 0 #ffffff inset, 0 5px 50px 0 #ffffff;
+  color: #000000;
+}
+.btn.examples {
+    margin-top: 80px;
+}
+.upload {
+    width: 100px;
+    height: 100px;
+    transform: translateY(-15%);
+}
+.drop-zone__prompt {
+    transform: translateY(-85%);
+}
+.drop-zone__input {
+	display: none;
+}
+.drop-zone__thumb {
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+	overflow: hidden;
+	background-color: rgba(0, 0, 0, 0);
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.url-box input[type="text"] {
+    height: 15px;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    width: 400px;
+}
+.response-box input[type="text"] {
+    height: 15px;
+    margin-right: 75%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    width: 680px;
+}
+.generate {
+ position: relative;
+ width: 150px;
+ height: 50px;
+ text-align: center;
+ color: #fff;
+ font-size: 18px;
+ text-decoration: none;
+ text-transform: uppercase;
+ font-family: sans-serif;
+ box-sizing: border-box;
+ background: linear-gradient(90deg, #03a9f4, #f441a4, #ffeb3b, #03a9f4);
+ background-size: 400%;
+ border-radius: 40px;
+ border: rgba(0,0,0,0);
+ transition: 500ms ease-in-out;
+ z-index: 1;
+}
+.generate:hover {
+    transition: 500ms ease-in-out;   
+ animation: animate 8s linear infinite;
+}
+@keyframes animate {
+ 0% {
+  background-position: 0%;
+ }
+ 100% {
+  background-position: 400%;
+ }
+}
+.generate:before {
+ content: '';
+ position: absolute;
+ top: -5px;
+ bottom: -5px;
+ right: -5px;
+ left: -5px;
+ z-index: -1;
+ background: linear-gradient(90deg, #03a9f4, #f441a4, #ffeb3b, #03a9f4);
+ background-size: 400%;
+ border-radius: 40px;
+ filter: blur(20px);
+ opacity: 0;
+ transition: 0.5s;
+}
+.generate:hover:before {
+    transition: 500ms ease-in-out;   
+ filter: blur(20px);
+ opacity: 1;
+ animation: animate 8s linear infinite;
+}
+
+.sound-button{
+    background-color: rgb(255, 255, 255,0.1);
+    border: 2px solid rgba(255, 255, 255, 0);
+    padding: 8px;
+    cursor: pointer;
+    margin-left: 8px;
+    transition: 200ms ease-in-out;
+    max-width: 60px;
+	height: 45px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	font-family: "Quicksand", sans-serif;
+	font-weight: 500;
+	font-size: 20px;
+	color: #cccccc;
+	border-radius: 10px;
+
+}
+.sound-button img {
+    max-width: 50px;
+    height: auto;
+    margin-right: 5px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+.sound-button:hover {
+        color: #ffffff;
+        transform: scale(1.1);
+        border: 2px solid rgba(255, 255, 255, 0.8);
+        transition: 200ms ease-in-out;
+}
+.sound-button:active {
+    color: rgba(128, 128, 128, 0.99);
+    transform: scale(1.1);
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.1) inset;
+}
+.switch {
+    display: flex;
+    cursor: pointer;
+    gap: 1px;
+}
+.switch input[type="radio"] {
+    display: none;
+}
+.switch label {
+    background-color: rgb(255, 255, 255,0.1);
+    color: rgb(255, 255, 255,0.7);
+    font-size: 13px;
+    padding: 7px;
+    border-radius: 8px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    transition: 200ms ease-in-out;
+}
+.switch input[type="radio"]:checked + label {
+    background-color: rgb(255, 255, 255,0.1);
+    color: rgb(255, 255, 255,0.85);
+    font-size: 13px;
+    padding: 7px;
+    border-radius: 8px;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    transition: 200ms ease-in-out;
+}
+.voice {
+    font-size: 13px;
+    color: rgb(255, 255, 255,0.7);
+    margin-left: 15px;
+}
+.url-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    body, html {
+        font-size: 12px;
+        padding: 0;
+        margin: 0;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        display: flex;
+    }
+    .menu {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        transform: translateY(155%);
+    }
+    .response-box,.sound-button,.url-box,.url-container,.generate-button,.switch,.voice,.examples-button {
+        display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+    }
+    .main-text {
+        font-size: 2.5em;
+        text-align: center;
+        transform: translateY(115%);
+        display: none;
+        color: rgb(0,0,0,0)
+    }
+}
