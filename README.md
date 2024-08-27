@@ -3,4 +3,4 @@ Image Captions
 image to text 
 
 Demo- 
-https://aimlproject.netlify.app/
+https://madhushankara.github.io/ai-pixel-prompt/
